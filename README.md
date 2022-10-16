@@ -14,4 +14,5 @@ A lightweight addon that tracks instance lockouts, and shows a view sorted by in
 * **/lockouts list**: Show list of lockouts in chat (seen by you only).
 * **/lockouts icon**: Toggle visibility of minimap icon.
 
+
 [![Package and release](https://github.com/neotron/WoW-MeeyrasLockouts/actions/workflows/make-release.yml/badge.svg)](https://github.com/neotron/WoW-MeeyrasLockouts/actions/workflows/make-release.yml)
