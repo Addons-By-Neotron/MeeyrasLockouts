@@ -1,0 +1,19 @@
+## Interface: 90205
+## Interface-Wrath: 30400
+## X-Curse-Project-ID: 689051
+## X-Wago-ID:
+## Title: Meeyra's Lockout Tracker
+## Notes: A fancy LDB raid / dungeon lockout display
+## Author: NeoTron
+## Version: 1.0
+## X-Category: Tooltip
+## X-eMail: neotron@gmail.com
+## OptionalDeps: Ace3, LibDatabroker-1.1, LibQTip-1.0, LibDataBroker-1.1, LibDBIcon-1.0
+## SavedVariables: MeeyrasLockouts
+
+# Library files
+embeds.xml
+Locales.xml
+MeeyrasLockouts.lua
+Config.lua
+
