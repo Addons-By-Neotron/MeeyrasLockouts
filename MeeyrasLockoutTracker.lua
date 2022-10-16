@@ -13,7 +13,7 @@ local ldb = LibStub("LibDataBroker-1.1"):NewDataObject(L["Meeyra's Lockout Track
             type =  "data source",
             label = L["Meeyra's Lockout Tracker"],
             text = L["Lockouts"],
-            icon = [[Interface\Addons\MeeyrasLockouts\keyhole]]
+            icon = [[Interface\Addons\MeeyrasLockoutTracker\keyhole]]
         })
 
 
