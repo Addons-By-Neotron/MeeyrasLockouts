@@ -22,3 +22,4 @@ L["Show Minimap Icon"] = true
 L["Toggle display of minimap button"] = true
 L["Toggle visibility of minimap icon."] = true
 L["Whether or not to show an icon on the minimap in addition or instead of using an LDB display"] = true
+L["Expired"] = true

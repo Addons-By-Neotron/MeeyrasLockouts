@@ -21,7 +21,6 @@ local function c(text, color)
     text = text or ""
     return fmt("|cff%s%s|r", color, text)
 end
-
 local gmod = _G.mod
 local format = format
 
@@ -73,6 +72,9 @@ end
 ---------------------------------------------------
 -- LDB Display and display utility methods
 function formatRemaining(time)
+    if time <= 0 then
+        return L["Expired"]
+    end
     local remain = ""
 
     local days = floor(time/86400)
@@ -157,19 +159,20 @@ function mod:GenerateLockouts()
             break
         end
 
-        if not lockouts[size] then
-            lockouts[size] = new()
-        end
-
         local sortname, replaced = gsub(name, "^The ", "")
         if replaced > 0 then
             sortname = sortname .. ", The"
+        end
+
+        if not lockouts[size] then
+            lockouts[size] = new()
         end
 
         lockouts[size][#lockouts[size]+1] = newHash(
                 "name", name,
                 "sortname", sortname,
                 "id", id,
+                "expired", remaining == 0,
                 "remaining", formatRemaining(remaining)
         )
     end
@@ -216,11 +219,13 @@ function ldb.OnEnter(frame)
         tooltip:AddLine()
         y = tooltip:AddLine()
         tooltip:SetCell(y, 1, c(key, "ffff00"), "LEFT")
+
         for _,lockout in ipairs(lockouts[key]) do
+            local col = lockout.expired and "888888" or "ffffff"
             y = tooltip:AddLine()
-            tooltip:SetCell(y, 1, "    "..lockout.sortname, "LEFT")
-            tooltip:SetCell(y, 2, lockout.remaining, "RIGHT")
-            tooltip:SetCell(y, 3, lockout.id, "LEFT")
+            tooltip:SetCell(y, 1, c("    "..lockout.sortname, col), "LEFT")
+            tooltip:SetCell(y, 2, c(lockout.remaining, col), "RIGHT")
+            tooltip:SetCell(y, 3, c(lockout.id, col), "LEFT")
         end
     end
 
