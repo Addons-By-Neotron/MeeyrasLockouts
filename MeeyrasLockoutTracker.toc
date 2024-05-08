@@ -1,5 +1,5 @@
-## Interface: 100205
-## Interface-Wrath: 30400
+## Interface: 100207
+## Interface-Wrath: 40400
 ## X-Curse-Project-ID: 689051
 ## X-Wago-ID: 25NRz1N3
 ## Title: Meeyra's Lockout Tracker
