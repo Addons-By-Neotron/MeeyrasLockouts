@@ -8,7 +8,7 @@
 ## Version: @project-version@
 ## X-Category: Tooltip
 ## X-eMail: neotron@gmail.com
-## OptionalDeps: Ace3, LibDatabroker-1.1, LibQTip-1.0, LibDataBroker-1.1, LibDBIcon-1.0
+## OptionalDeps: Ace3, LibDatabroker-1.1, LibQTip-1.0, LibDataBroker-1.1, LibDBIcon-1.0, LibMagicUtil-1.0
 ## SavedVariables: MeeyrasLockouts
 
 # Library files

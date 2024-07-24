@@ -1,4 +1,4 @@
-MeeyrasLockouts = LibStub("AceAddon-3.0"):NewAddon("Meeyra's Lockout Tracker", "AceEvent-3.0", "AceTimer-3.0", "AceConsole-3.0")
+MeeyrasLockouts = LibStub("AceAddon-3.0"):NewAddon("Meeyra's Lockout Tracker", "AceEvent-3.0", "AceTimer-3.0", "AceConsole-3.0", "LibMagicUtil-1.0")
 local mod = MeeyrasLockouts
 local tooltip
 
@@ -300,8 +300,8 @@ function ldb.OnClick(frame, button)
         if IsAltKeyDown() then
             mod:SendLockoutsToChat()
         else
-            InterfaceOptionsFrame_OpenToCategory(mod.main)
-            InterfaceOptionsFrame_OpenToCategory(mod.main)
+            mod:InterfaceOptionsFrame_OpenToCategory(mod.main)
+            mod:InterfaceOptionsFrame_OpenToCategory(mod.main)
         end
 
     elseif button == "RightButton" and IsAltKeyDown()  then
