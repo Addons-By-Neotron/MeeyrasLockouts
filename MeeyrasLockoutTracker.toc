@@ -1,4 +1,4 @@
-## Interface: 100207
+## Interface: 110000
 ## Interface-Cata: 40400
 ## X-Curse-Project-ID: 689051
 ## X-Wago-ID: 25NRz1N3
