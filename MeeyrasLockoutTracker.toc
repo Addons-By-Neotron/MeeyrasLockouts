@@ -1,6 +1,4 @@
 ## Interface: 110107
-## Interface-Cata: 40402
-## Interface-Mists: 50500
 ## X-Curse-Project-ID: 689051
 ## X-Wago-ID: 25NRz1N3
 ## Title: Meeyra's Lockout Tracker
@@ -11,7 +9,7 @@
 ## X-eMail: neotron@gmail.com
 ## OptionalDeps: Ace3, LibDatabroker-1.1, LibQTip-1.0, LibDataBroker-1.1, LibDBIcon-1.0, LibMagicUtil-1.0
 ## SavedVariables: MeeyrasLockouts
-
+## IconTexture: Interface\Addons\MeeyrasLockoutTracker\keyhole.tga
 # Library files
 embeds.xml
 Locales.xml
