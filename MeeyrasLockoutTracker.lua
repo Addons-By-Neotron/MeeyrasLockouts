@@ -126,7 +126,7 @@ do
     end
 
     function del(t)
-        if type(t) ~= table then
+        if type(t) ~= "table" then
             return nil
         end
         for k,v in pairs(t) do
@@ -149,9 +149,17 @@ end
 
 local lockouts = new()
 
+-- Empties lockouts in place, recycling its contents. (deepDel(lockouts)
+-- would return the table itself to the pool while it's still in use.)
+local function ClearLockouts()
+    for k, v in pairs(lockouts) do
+        lockouts[k] = deepDel(v)
+    end
+end
+
 function mod:GenerateLockouts()
     local lockoutKeys =  new()
-    deepDel(lockouts)
+    ClearLockouts()
 
     for i = 1,1000, 1 do
         local name,id,remaining,_,_,_,_,_,_,size = GetSavedInstanceInfo(i)
@@ -240,7 +248,7 @@ function ldb.OnEnter(frame)
 
 
     del(lockoutKeys)
-    deepDel(lockouts)
+    ClearLockouts()
     tooltip:Show()
 end
 
@@ -269,7 +277,7 @@ function mod:PrintLockouts()
     end
 
     del(lockoutKeys)
-    deepDel(lockouts)
+    ClearLockouts()
 
 end
 
@@ -292,7 +300,7 @@ function mod:SendLockoutsToChat()
     end
 
     del(lockoutKeys)
-    deepDel(lockouts)
+    ClearLockouts()
 end
 
 function ldb.OnClick(frame, button)
